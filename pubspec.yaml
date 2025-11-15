@@ -1,5 +1,5 @@
 name: fancy_counter
-description: A Flutter package providing two highly customizable, animated number counters: AnimatedTextCounter and FlipCounter.
+description: A Flutter package providing two highly customizable, animated number counters AnimatedTextCounter and FlipCounter.
 version: 0.0.1
 homepage: https://github.com/bedii97/fancy_counter
 
