@@ -1,3 +1,5 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* **Initial Release**
+* Added `AnimatedTextCounter`: A widget that animates text counting from one value to another. Supports custom curves, fraction digits, and color flashes on increase/decrease.
+* Added `FlipCounter`: A widget that animates numbers with a "scrolling" or "odometer" effect for each digit. Also supports custom curves, fraction digits, and color flashes.
