@@ -1,3 +1,7 @@
+## 0.0.2
+
+* Rename widgets to FancyFlipCounter and FancyTextCounter
+
 ## 0.0.1
 
 * **Initial Release**

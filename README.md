@@ -1,6 +1,6 @@
 # fancy_counter
 
-A Flutter package providing two highly customizable, animated number counters: `AnimatedTextCounter` and `FlipCounter`.
+A Flutter package providing two highly customizable, animated number counters: `FancyTextCounter` and `FancyFlipCounter`.
 
 Showcase your statistics, scores, or any dynamic number with smooth, beautiful animations and optional color flashes.
 
@@ -13,8 +13,8 @@ Showcase your statistics, scores, or any dynamic number with smooth, beautiful a
 ## Features
 
 * **Two Widgets in One:**
-  * **`AnimatedTextCounter`**: Animates a text value smoothly from an old number to a new one.
-  * **`FlipCounter`**: Animates each digit individually with a "scroll" or "odometer" effect.
+  * **`FancyTextCounter`**: Animates a text value smoothly from an old number to a new one.
+  * **`FancyFlipCounter`**: Animates each digit individually with a "scroll" or "odometer" effect.
 * **Highly Customizable:** Control the `duration`, `curve` (including elastic and bounce effects), `prefix`, `postfix`, and `fractionDigits`.
 * **Color Flash:** Automatically flashes a custom color on value `increase` or `decrease` (e.g., green for up, red for down). This feature is optional.
 * **Performant:** Both widgets are state-managed and optimized for performance, rebuilding only what's necessary.
@@ -45,12 +45,12 @@ import 'package.fancy_counter/fancy_counter.dart';
 
 Using the widgets is simple. Just provide a `value` and a `duration`.
 
-### `AnimatedTextCounter`
+### `FancyTextCounter`
 
 This widget is great for general-purpose counters where the whole number animates smoothly.
 
 ```dart
-AnimatedTextCounter(
+FancyTextCounter(
   value: _yourCounterValue,
   duration: const Duration(milliseconds: 500),
   style: Theme.of(context).textTheme.headlineMedium,
@@ -62,12 +62,12 @@ AnimatedTextCounter(
 )
 ```
 
-### `FlipCounter`
+### `FancyFlipCounter`
 
 This widget gives a mechanical "odometer" or "flip" feel, as each digit scrolls individually.
 
 ```dart
-FlipCounter(
+FancyFlipCounter(
   value: _yourCounterValue,
   duration: const Duration(milliseconds: 500),
   style: Theme.of(context).textTheme.headlineMedium,
