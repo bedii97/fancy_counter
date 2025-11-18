@@ -15,7 +15,7 @@ class FancyTextCounter extends StatefulWidget {
     required this.value,
 
     /// The duration of the animation.
-    required this.duration,
+    this.duration = const Duration(milliseconds: 300),
 
     // --- Optional Customization ---
 
