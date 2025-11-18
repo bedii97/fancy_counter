@@ -12,7 +12,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: AnimatedTextCounter(
+            body: FancyTextCounter(
               value: 100,
               duration: Duration(milliseconds: 500),
             ),
@@ -36,7 +36,7 @@ void main() {
         await tester.pumpWidget(
           MaterialApp(
             home: Scaffold(
-              body: AnimatedTextCounter(
+              body: FancyTextCounter(
                 value: 100,
                 duration: Duration(milliseconds: 500),
                 animateOnFirstBuild: false,
@@ -56,7 +56,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: AnimatedTextCounter(
+            body: FancyTextCounter(
               value: 50,
               duration: Duration(milliseconds: 100),
               prefix: '₺',
@@ -100,7 +100,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: FlipCounter(
+            body: FancyFlipCounter(
               value: 123,
               duration: Duration(milliseconds: 500),
             ),
@@ -134,7 +134,7 @@ void main() {
         await tester.pumpWidget(
           MaterialApp(
             home: Scaffold(
-              body: FlipCounter(
+              body: FancyFlipCounter(
                 value: 45.67,
                 duration: Duration(milliseconds: 100),
                 prefix: '₺',

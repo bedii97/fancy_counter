@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 ///
 /// It also provides an optional color flash animation (e.g., green for
 /// increase, red for decrease) perfectly synchronized with the count animation.
-class AnimatedTextCounter extends StatefulWidget {
-  const AnimatedTextCounter({
+class FancyTextCounter extends StatefulWidget {
+  /// Creates an [FancyTextCounter] widget.
+  const FancyTextCounter({
     super.key,
 
     // --- Required ---
@@ -45,22 +46,42 @@ class AnimatedTextCounter extends StatefulWidget {
     this.curve = Curves.easeOut,
   });
 
+  /// The target value to animate to.
   final double value;
+
+  /// The [Duration] of the animation.
   final Duration duration;
+
+  /// The [TextStyle] to use for the text.
   final TextStyle? style;
+
+  /// An optional text to display before the counter. e.g. `₺`
   final String prefix;
+
+  /// An optional text to display after the counter. e.g. ` USD`
   final String postfix;
+
+  /// The number of digits to display after the decimal point.
   final int fractionDigits;
+
+  /// The color to flash when the value increases.
   final Color? increaseColor;
+
+  /// The color to flash when the value decreases.
   final Color? decreaseColor;
+
+  /// Whether to animate the counter on its first build (from 0 to [value]).
   final bool animateOnFirstBuild;
+
+  /// The animation curve to use for both count and color animations.
   final Curve curve;
 
   @override
-  _AnimatedTextCounterState createState() => _AnimatedTextCounterState();
+  FancyTextCounterState createState() => FancyTextCounterState();
 }
 
-class _AnimatedTextCounterState extends State<AnimatedTextCounter>
+/// The state class for [FancyTextCounter].
+class FancyTextCounterState extends State<FancyTextCounter>
     with SingleTickerProviderStateMixin {
   // 1. The main animation controller.
   late AnimationController _controller;
@@ -99,7 +120,7 @@ class _AnimatedTextCounterState extends State<AnimatedTextCounter>
 
   // This method is called when the parent widget rebuilds with a new [value].
   @override
-  void didUpdateWidget(AnimatedTextCounter oldWidget) {
+  void didUpdateWidget(FancyTextCounter oldWidget) {
     super.didUpdateWidget(oldWidget);
 
     // If the target value has changed...

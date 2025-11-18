@@ -19,10 +19,10 @@ class CounterExamplePage extends StatefulWidget {
   const CounterExamplePage({super.key});
 
   @override
-  _CounterExamplePageState createState() => _CounterExamplePageState();
+  CounterExamplePageState createState() => CounterExamplePageState();
 }
 
-class _CounterExamplePageState extends State<CounterExamplePage> {
+class CounterExamplePageState extends State<CounterExamplePage> {
   // Start at 100.0 to better see the animation
   double _counter = 100.0;
 
@@ -49,7 +49,7 @@ class _CounterExamplePageState extends State<CounterExamplePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // --- 1. AnimatedTextCounter Widget ---
-            AnimatedTextCounter(
+            FancyTextCounter(
               value: _counter,
               duration: const Duration(milliseconds: 500),
               style: textTheme.headlineMedium,
@@ -65,7 +65,7 @@ class _CounterExamplePageState extends State<CounterExamplePage> {
             const SizedBox(height: 40),
 
             // --- 2. FlipCounter Widget ---
-            FlipCounter(
+            FancyFlipCounter(
               value: _counter,
               duration: const Duration(milliseconds: 500),
               style: textTheme.headlineMedium,

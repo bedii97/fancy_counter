@@ -8,8 +8,9 @@ import 'package:flutter/material.dart';
 /// This widget is stateful and uses an [AnimationController] to manually
 /// interpolate each digit from its previous value to the new [value].
 /// It also supports a synchronized color flash for increases or decreases.
-class FlipCounter extends StatefulWidget {
-  const FlipCounter({
+class FancyFlipCounter extends StatefulWidget {
+  /// Creates a [FancyFlipCounter] widget.
+  const FancyFlipCounter({
     super.key,
 
     // --- Required ---
@@ -49,22 +50,42 @@ class FlipCounter extends StatefulWidget {
     this.animateOnFirstBuild = true,
   });
 
+  /// The target value to animate to.
   final double value;
+
+  /// The [Duration] of the animation.
   final Duration duration;
+
+  /// The animation curve to use for both count and color animations.
   final Curve curve;
+
+  /// The [TextStyle] to use for the text.
   final TextStyle? style;
+
+  /// An optional text to display before the counter. e.g. `₺`
   final String prefix;
+
+  /// An optional text to display after the counter. e.g. ` USD`
   final String postfix;
+
+  /// The number of digits to display after the decimal point.
   final int fractionDigits;
+
+  /// The color to flash when the value increases.
   final Color? increaseColor;
+
+  /// The color to flash when the value decreases.
   final Color? decreaseColor;
+
+  /// Whether to animate the counter on its first build (from 0 to [value]).
   final bool animateOnFirstBuild;
 
   @override
-  _FlipCounterState createState() => _FlipCounterState();
+  FancyFlipCounterState createState() => FancyFlipCounterState();
 }
 
-class _FlipCounterState extends State<FlipCounter>
+/// The state class for [FancyFlipCounter].
+class FancyFlipCounterState extends State<FancyFlipCounter>
     with SingleTickerProviderStateMixin {
   // The main controller for the 0.0 -> 1.0 animation progress.
   late AnimationController _controller;
@@ -98,7 +119,7 @@ class _FlipCounterState extends State<FlipCounter>
   }
 
   @override
-  void didUpdateWidget(FlipCounter oldWidget) {
+  void didUpdateWidget(FancyFlipCounter oldWidget) {
     super.didUpdateWidget(oldWidget);
 
     // If the target value has changed, restart the animation
