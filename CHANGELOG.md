@@ -1,6 +1,7 @@
-## 0.0.2
+## 0.1.0
 
-* Rename widgets to FancyFlipCounter and FancyTextCounter
+* BREAKING CHANGE: Renamed `FlipCounter` to `FancyFlipCounter`.
+* BREAKING CHANGE: Renamed `AnimatedTextCounter` to `FancyTextCounter`.
 
 ## 0.0.1
 
